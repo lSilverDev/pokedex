@@ -10,7 +10,7 @@
         </div>
         <div>
             <aside class="pokedex__sidebar">
-                <PokeList/>
+                <PokeList @pokemonSelected="pokemonCatch"/>
             </aside>
 
             <section class="pokedex__pokemon-info">
@@ -31,13 +31,27 @@
 import { defineComponent } from "vue";
 import PokeList from "../Pokelist/pokeList.vue";
 import PokeCard from "../Pokecard/pokeCard.vue";
+import axios from "axios";
 
 export default defineComponent({
     name: "pokedex",
+    emits: ["information_catched"],
     components:{
         PokeList,
         PokeCard
-    }
+    },
+    props: { pokemon: { type: String, requered: true, } },
+    methods: {
+        pokemonCatch(pokemon) {
+            axios
+            .get(pokemon)
+            .then((res) => {
+                console.log(res);
+            }).catch((error) => {
+                console.log(error);
+            });
+        },
+    },
 })
 </script>
 
