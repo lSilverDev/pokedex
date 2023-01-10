@@ -1,14 +1,14 @@
 <template>
-    <body>
-        <header class="pokedex__menu">
+    <div class="pokedex">
+        <div class="pokedex__menu">
             <div class="pokedex__menu-icon-container">
                 <i class="material-symbols-outlined">menu</i>
             </div>
             <div class="pokedex__input">
                 <input type="text">
             </div>
-        </header>
-        <main>
+        </div>
+        <div>
             <aside class="pokedex__sidebar">
                 <PokeList/>
             </aside>
@@ -16,19 +16,21 @@
             <section class="pokedex__pokemon-info">
                 <PokeCard/>
             </section>
-        </main>
-        <footer class="pokedes__footer">
+        </div>
+        <div class="pokedes__footer">
             <div class="pokedes__footer-container-test">
                 <p>Made by llSilverDev</p>
             </div>
-        </footer>
-    </body>
+        </div>
+    </div>
+        
+
 </template>
 
 <script>
 import { defineComponent } from "vue";
-import PokeList from "./pokeList.vue";
-import PokeCard from "./pokeCard.vue";
+import PokeList from "../Pokelist/pokeList.vue";
+import PokeCard from "../Pokecard/pokeCard.vue";
 
 export default defineComponent({
     name: "pokedex",
@@ -38,3 +40,7 @@ export default defineComponent({
     }
 })
 </script>
+
+<style>
+@import './style.scss';
+</style>

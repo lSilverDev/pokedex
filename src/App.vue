@@ -4,7 +4,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import Pokedex from "./components/pokedex.vue";
+import Pokedex from "./components/Pokedex/pokedex.vue";
 
 export default defineComponent({
   name: "App",
@@ -14,4 +14,4 @@ export default defineComponent({
 });
 </script>
 
-<style scoped></style>
+<style></style>

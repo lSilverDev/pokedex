@@ -1,0 +1,24 @@
+.pokedex{
+    display: flex;
+    flex-direction: column;
+}    
+
+.pokedex__menu{
+    display: flex;
+    background-color: #850000;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pokedex__sidebar{
+    height: 90vh;
+    width: 30%;
+    background-color: #FFF6C3;
+    overflow: auto;
+}
+
+.pokedex__pokemon-info{
+    width: 70%;
+    overflow: auto;
+}
