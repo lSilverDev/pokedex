@@ -1,14 +1,10 @@
 <template>
-  <div class="row">
-    <div name="col">
-      <button @click="getPokemons()">oi</button>
-      <select>
-        <option v-for="(pokemon, index) in pokemons" :key="index">
-          {{ pokemon.name }}
-        </option>
-      </select>
-    </div>
-  </div>
+  <button @click="getPokemons()">Turn On</button>
+  <ul class="pokedex__poke-list" v-for="(pokemon, index) in pokemons" :key="index">
+      <li>
+        {{ pokemon.name }}
+      </li>
+  </ul>
 </template>
 
 <script>
@@ -19,6 +15,7 @@ const pokemons = [];
 
 export default defineComponent({
   name: "PokeList",
+  components: {},
   data() {
     return {
       pokemons,
