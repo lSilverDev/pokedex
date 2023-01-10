@@ -1,0 +1,24 @@
+.pokedex__poke-list{
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+}
+
+.pokemon__li{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: white;
+    font-weight: 300;
+    font-size: medium;
+    padding-left: 0px !important;
+    width: 80%;
+    height: 25px;
+}
+
+.pokemon__li:hover{
+    border: 2px solid #82AAE3;
+}

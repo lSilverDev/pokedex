@@ -1,7 +1,9 @@
 <template>
-  <button @click="getPokemons()">Turn On</button>
+  <button @click="getPokemons()">
+    <i class="material-symbols-outlined">fiber_manual_record</i>
+  </button>
   <ul class="pokedex__poke-list" v-for="(pokemon, index) in pokemons" :key="index">
-      <li>
+      <li class="pokemon__li" @click="selected(pokemon.name)">
         {{ pokemon.name }}
       </li>
   </ul>
@@ -34,6 +36,14 @@ export default defineComponent({
           console.log(error);
         });
     },
+    selected(pokemon){
+      console.log(pokemon);
+    }
   },
 });
 </script>
+
+
+<style>
+@import './style.scss';
+</style>
