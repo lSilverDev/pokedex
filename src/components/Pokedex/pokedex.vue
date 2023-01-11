@@ -7,9 +7,9 @@
             <div class="pokedex__input">
                 <input type="text">
             </div>
-            <!-- <div class="pokedex__pokebola-container">
+            <div class="pokedex__pokebola-container">
                 <div class="pokedex_pokebola"></div>
-            </div> -->
+            </div>
         </div>
         <div class="pokedex__main">
             <div class="pokedex__sidebar">
