@@ -14,4 +14,6 @@ export default defineComponent({
 });
 </script>
 
-<style></style>
+<style>
+@import "./assets/styles/style.css";
+</style>

@@ -1,14 +1,13 @@
 <template>
   <div class="card">
     <div>
-      <!-- nome e id -->
       {{ storage.pokemon_name }}
     </div>
     <div>
-      <!-- Foto -->
+      {{ storage.pokemon_info.sprites }}
     </div>
-    <div>
-      <!-- descriçao 
+    <!-- <div>
+      descriçao 
       abilidades
       genero 
       height
@@ -16,9 +15,9 @@
       categoria
       type
       weaknesses
-      stats -->
+      stats
       {{ storage.pokemon_info }}
-    </div>
+    </div> -->
   </div>
 </template>
 
