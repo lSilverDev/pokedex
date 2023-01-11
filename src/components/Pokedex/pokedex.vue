@@ -42,22 +42,10 @@ export default defineComponent({
     },
     setup(){
         let storage = ref(importStorage);
-        
         return {
             storage,
         }
-    },
-    methods: {
-        pokemonCatchInfo() {
-            axios
-            .get(storage.pokemon_url)
-            .then((res) => {
-                this.storage.pokemon_info = res.data;
-            }).catch((error) => {
-                console.log(error);
-            });
-        },
-    },
+    }
 })
 </script>
 

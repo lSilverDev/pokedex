@@ -43,9 +43,19 @@ export default defineComponent({
           console.log(error);
         });
     },
+    pokemonCatchInfo() {
+        axios
+        .get(this.storage.pokemon_url)
+        .then((res) => {
+            this.storage.pokemon_info = res.data;
+        }).catch((error) => {
+            console.log(error);
+        });
+    },
     selected(pokemon){
       this.storage.pokemon_name = pokemon.name;
       this.storage.pokemon_url = pokemon.url;
+      this.pokemonCatchInfo();
     }
   },
 });

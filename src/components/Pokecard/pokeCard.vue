@@ -7,7 +7,7 @@
       
     </div>
     <div>
-      
+      {{ storage.pokemon_info }}
     </div>
   </div>
 </template>
