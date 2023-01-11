@@ -2,7 +2,6 @@
   <button @click="getPokemons()">
     <i class="material-symbols-outlined">fiber_manual_record</i>
   </button>
-  {{ storage.pokemon }}
   <ul class="pokedex__poke-list" v-for="(pokemon, index) in pokemons" :key="index">
       <li class="pokemon__li" @click="selected(pokemon)">
         {{ pokemon.name }}
@@ -20,7 +19,6 @@ const pokemons = [];
 export default defineComponent({
   name: "PokeList",
   components: {},
-  emits: ["pokemonSelected"],
   setup(){
     let storage = ref(importStorage);
     return {
@@ -46,7 +44,8 @@ export default defineComponent({
         });
     },
     selected(pokemon){
-      this.$emit("pokemonSelected", pokemon.url);
+      this.storage.pokemon_name = pokemon.name;
+      this.storage.pokemon_url = pokemon.url;
     }
   },
 });

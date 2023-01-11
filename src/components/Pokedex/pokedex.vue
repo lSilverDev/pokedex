@@ -1,6 +1,6 @@
 <template>
     <div class="pokedex">
-        <div class="pokedex__menu" @click="storage.pokemon = storage.pokemon + 'k'">
+        <div class="pokedex__menu">
             <div class="pokedex__menu-icon-container">
                 <i class="material-symbols-outlined">menu</i>
             </div>
@@ -10,7 +10,7 @@
         </div>
         <div>
             <aside class="pokedex__sidebar">
-                <PokeList @pokemonSelected="pokemonCatch"/>
+                <PokeList/>
             </aside>
 
             <section class="pokedex__pokemon-info">
@@ -31,29 +31,28 @@
 import { defineComponent, ref } from "vue";
 import PokeList from "../Pokelist/pokeList.vue";
 import PokeCard from "../Pokecard/pokeCard.vue";
-import importStorage from '@/storage/storage.ts'
+import importStorage from '@/storage/storage.ts';
 import axios from "axios";
 
 export default defineComponent({
     name: "pokedex",
-    emits: ["information_catched"],
     components:{
         PokeList,
         PokeCard
     },
     setup(){
-    let storage = ref(importStorage);
-    return {
-      storage,
-    }
-  },
-    props: { pokemon: { type: String, requered: true, } },
+        let storage = ref(importStorage);
+        
+        return {
+            storage,
+        }
+    },
     methods: {
-        pokemonCatch(pokemon) {
+        pokemonCatchInfo() {
             axios
-            .get(pokemon)
+            .get(storage.pokemon_url)
             .then((res) => {
-                console.log(res);
+                this.storage.pokemon_info = res.data;
             }).catch((error) => {
                 console.log(error);
             });

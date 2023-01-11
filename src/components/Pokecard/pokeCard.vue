@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <div>
-      {{ pokemon }}
+      {{ storage.pokemon_name }}
     </div>
     <div>
       
@@ -13,11 +13,17 @@
 </template>
 
 <script>
-import { defineComponent } from "vue";
+import { defineComponent, ref } from "vue";
+import importStorage from '@/storage/storage.ts';
 
 export default defineComponent({
     name: "pokecard",
-    props: { pokemon: { type: String, requered: true, } },
+    setup(){
+    let storage = ref(importStorage);
+    return {
+      storage,
+    }
+  },
 })
 </script>
 
