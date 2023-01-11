@@ -1,24 +1,197 @@
+@import "../../assets/styles/abstract/variaveis";
+
 .pokedex__poke-list{
     display: flex;
     justify-content: center;
     padding-left: 0;
+    .pokemon__li{
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid black;
+        border-radius: 5px;
+        background-color: $color-white;
+        font-weight: 550;
+        font-size: large;
+        text-transform: uppercase;
+        padding-left: 0px !important;
+        width: 80%;
+        height: 36px;
+    }
+    .mini__pokebola-container {
+        width: 12rem;
+        height: 12rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        .mini-pokebola {
+            width: 1rem;
+            height: 1rem;
+            box-shadow: 
+            // row 0
+            0rem 0rem 0 -0.05rem $color-white,
+            1rem 0rem 0 -0.05rem $color-white,
+            2rem 0rem 0 -0.05rem $color-white,
+            3rem 0rem 0 -0.05rem $color-white,
+            4rem 0rem 0 -0.05rem $color-black,
+            5rem 0rem 0 -0.05rem $color-black,
+            6rem 0rem 0 -0.05rem $color-black,
+            7rem 0rem 0 -0.05rem $color-black,
+            8rem 0rem 0 -0.05rem $color-white,
+            9rem 0rem 0 -0.05rem $color-white,
+            10rem 0rem 0 -0.05rem $color-white,
+            11rem 0rem 0 -0.05rem $color-white,
+            // row 1
+            0rem 1rem 0 -0.05rem $color-white,
+            1rem 1rem 0 -0.05rem $color-white,
+            2rem 1rem 0 -0.05rem $color-black,
+            3rem 1rem 0 -0.05rem $color-black,
+            4rem 1rem 0 -0.05rem $color-red,
+            5rem 1rem 0 -0.05rem $color-red,
+            6rem 1rem 0 -0.05rem $color-red,
+            7rem 1rem 0 -0.05rem $color-red,
+            8rem 1rem 0 -0.05rem $color-black,
+            9rem 1rem 0 -0.05rem $color-black,
+            10rem 1rem 0 -0.05rem $color-white,
+            11rem 1rem 0 -0.05rem $color-white,
+            // row 2
+            0rem 2rem 0 -0.05rem $color-white,
+            1rem 2rem 0 -0.05rem $color-black,
+            2rem 2rem 0 -0.05rem $color-red,
+            3rem 2rem 0 -0.05rem $color-red,
+            4rem 2rem 0 -0.05rem $color-red,
+            5rem 2rem 0 -0.05rem $color-red,
+            6rem 2rem 0 -0.05rem $color-red,
+            7rem 2rem 0 -0.05rem $color-red,
+            8rem 2rem 0 -0.05rem $color-red,
+            9rem 2rem 0 -0.05rem $color-red,
+            10rem 2rem 0 -0.05rem $color-black,
+            11rem 2rem 0 -0.05rem $color-white,
+            // row 3
+            0rem 3rem 0 -0.05rem $color-white,
+            1rem 3rem 0 -0.05rem $color-black,
+            2rem 3rem 0 -0.05rem $color-red,
+            3rem 3rem 0 -0.05rem $color-red,
+            4rem 3rem 0 -0.05rem $color-red,
+            5rem 3rem 0 -0.05rem $color-red,
+            6rem 3rem 0 -0.05rem $color-red,
+            7rem 3rem 0 -0.05rem $color-red,
+            8rem 3rem 0 -0.05rem $color-red,
+            9rem 3rem 0 -0.05rem $color-red,
+            10rem 3rem 0 -0.05rem $color-black,
+            11rem 3rem 0 -0.05rem $color-white,
+            // row 4
+            0rem 4rem 0 -0.05rem $color-black,
+            1rem 4rem 0 -0.05rem $color-red,
+            2rem 4rem 0 -0.05rem $color-red,
+            3rem 4rem 0 -0.05rem $color-red,
+            4rem 4rem 0 -0.05rem $color-red,
+            5rem 4rem 0 -0.05rem $color-red,
+            6rem 4rem 0 -0.05rem $color-red,
+            7rem 4rem 0 -0.05rem $color-red,
+            8rem 4rem 0 -0.05rem $color-red,
+            9rem 4rem 0 -0.05rem $color-red,
+            10rem 4rem 0 -0.05rem $color-red,
+            11rem 4rem 0 -0.05rem $color-black,
+            // row 5
+            0rem 5rem 0 -0.05rem $color-black,
+            1rem 5rem 0 -0.05rem $color-red,
+            2rem 5rem 0 -0.05rem $color-red,
+            3rem 5rem 0 -0.05rem $color-red,
+            4rem 5rem 0 -0.05rem $color-red,
+            5rem 5rem 0 -0.05rem $color-black,
+            6rem 5rem 0 -0.05rem $color-black,
+            7rem 5rem 0 -0.05rem $color-red,
+            8rem 5rem 0 -0.05rem $color-red,
+            9rem 5rem 0 -0.05rem $color-red,
+            10rem 5rem 0 -0.05rem $color-red,
+            11rem 5rem 0 -0.05rem $color-black,
+            // row 6
+            0rem 6rem 0 -0.05rem $color-black,
+            1rem 6rem 0 -0.05rem $color-black,
+            2rem 6rem 0 -0.05rem $color-red,
+            3rem 6rem 0 -0.05rem $color-red,
+            4rem 6rem 0 -0.05rem $color-black,
+            5rem 6rem 0 -0.05rem $color-white,
+            6rem 6rem 0 -0.05rem $color-white,
+            7rem 6rem 0 -0.05rem $color-black,
+            8rem 6rem 0 -0.05rem $color-red,
+            9rem 6rem 0 -0.05rem $color-red,
+            10rem 6rem 0 -0.05rem $color-black,
+            11rem 6rem 0 -0.05rem $color-black,
+            // row 7
+            0rem 7rem 0 -0.05rem $color-black,
+            1rem 7rem 0 -0.05rem $color-white,
+            2rem 7rem 0 -0.05rem $color-black,
+            3rem 7rem 0 -0.05rem $color-black,
+            4rem 7rem 0 -0.05rem $color-black,
+            5rem 7rem 0 -0.05rem $color-white,
+            6rem 7rem 0 -0.05rem $color-white,
+            7rem 7rem 0 -0.05rem $color-black,
+            8rem 7rem 0 -0.05rem $color-black,
+            9rem 7rem 0 -0.05rem $color-black,
+            10rem 7rem 0 -0.05rem $color-white,
+            11rem 7rem 0 -0.05rem $color-black,
+            // row 8
+            0rem 8rem 0 -0.05rem $color-white,
+            1rem 8rem 0 -0.05rem $color-black,
+            2rem 8rem 0 -0.05rem $color-white,
+            3rem 8rem 0 -0.05rem $color-white,
+            4rem 8rem 0 -0.05rem $color-white,
+            5rem 8rem 0 -0.05rem $color-black,
+            6rem 8rem 0 -0.05rem $color-black,
+            7rem 8rem 0 -0.05rem $color-white,
+            8rem 8rem 0 -0.05rem $color-white,
+            9rem 8rem 0 -0.05rem $color-white,
+            10rem 8rem 0 -0.05rem $color-black,
+            11rem 8rem 0 -0.05rem $color-white,
+            // row 9
+            0rem 9rem 0 -0.05rem $color-white,
+            1rem 9rem 0 -0.05rem $color-black,
+            2rem 9rem 0 -0.05rem $color-white,
+            3rem 9rem 0 -0.05rem $color-white,
+            4rem 9rem 0 -0.05rem $color-white,
+            5rem 9rem 0 -0.05rem $color-white,
+            6rem 9rem 0 -0.05rem $color-white,
+            7rem 9rem 0 -0.05rem $color-white,
+            8rem 9rem 0 -0.05rem $color-white,
+            9rem 9rem 0 -0.05rem $color-white,
+            10rem 9rem 0 -0.05rem $color-black,
+            11rem 9rem 0 -0.05rem $color-white,
+            // row 10
+            0rem 10rem 0 -0.05rem $color-white,
+            1rem 10rem 0 -0.05rem $color-white,
+            2rem 10rem 0 -0.05rem $color-black,
+            3rem 10rem 0 -0.05rem $color-black,
+            4rem 10rem 0 -0.05rem $color-white,
+            5rem 10rem 0 -0.05rem $color-white,
+            6rem 10rem 0 -0.05rem $color-white,
+            7rem 10rem 0 -0.05rem $color-white,
+            8rem 10rem 0 -0.05rem $color-black,
+            9rem 10rem 0 -0.05rem $color-black,
+            10rem 10rem 0 -0.05rem $color-white,
+            11rem 10rem 0 -0.05rem $color-white,
+            // row 11
+            0rem 11rem 0 -0.05rem $color-white,
+            1rem 11rem 0 -0.05rem $color-white,
+            2rem 11rem 0 -0.05rem $color-white,
+            3rem 11rem 0 -0.05rem $color-white,
+            4rem 11rem 0 -0.05rem $color-black,
+            5rem 11rem 0 -0.05rem $color-black,
+            6rem 11rem 0 -0.05rem $color-black,
+            7rem 11rem 0 -0.05rem $color-black,
+            8rem 11rem 0 -0.05rem $color-white,
+            9rem 11rem 0 -0.05rem $color-white,
+            10rem 11rem 0 -0.05rem $color-white,
+            11rem 11rem 0 -0.05rem $color-white
+        }
+    }
+    .pokemon__li:hover{
+        border: 2px solid $color-dark-green;
+    }
 }
 
-.pokemon__li{
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: white;
-    font-weight: 300;
-    font-size: medium;
-    padding-left: 0px !important;
-    width: 80%;
-    height: 25px;
-}
 
-.pokemon__li:hover{
-    border: 2px solid #82AAE3;
-}
+

@@ -5,6 +5,9 @@
   <ul class="pokedex__poke-list" v-for="(pokemon, index) in pokemons" :key="index">
       <li class="pokemon__li" @click="selected(pokemon)">
         {{ pokemon.name }}
+          <div class="mini__pokebola-container">
+              <div class="mini-pokebola"></div>
+          </div>
       </li>
   </ul>
 </template>
