@@ -1,6 +1,6 @@
 <template>
     <div class="pokedex">
-        <div class="pokedex__menu">
+        <div class="pokedex__menu" @click="storage.pokemon = storage.pokemon + 'k'">
             <div class="pokedex__menu-icon-container">
                 <i class="material-symbols-outlined">menu</i>
             </div>
@@ -28,9 +28,10 @@
 </template>
 
 <script>
-import { defineComponent } from "vue";
+import { defineComponent, ref } from "vue";
 import PokeList from "../Pokelist/pokeList.vue";
 import PokeCard from "../Pokecard/pokeCard.vue";
+import importStorage from '@/storage/storage.ts'
 import axios from "axios";
 
 export default defineComponent({
@@ -40,6 +41,12 @@ export default defineComponent({
         PokeList,
         PokeCard
     },
+    setup(){
+    let storage = ref(importStorage);
+    return {
+      storage,
+    }
+  },
     props: { pokemon: { type: String, requered: true, } },
     methods: {
         pokemonCatch(pokemon) {

@@ -2,6 +2,7 @@
   <button @click="getPokemons()">
     <i class="material-symbols-outlined">fiber_manual_record</i>
   </button>
+  {{ storage.pokemon }}
   <ul class="pokedex__poke-list" v-for="(pokemon, index) in pokemons" :key="index">
       <li class="pokemon__li" @click="selected(pokemon)">
         {{ pokemon.name }}
@@ -10,8 +11,9 @@
 </template>
 
 <script>
-import { defineComponent } from "vue";
+import { defineComponent, ref } from "vue";
 import axios from "axios";
+import importStorage from '@/storage/storage.ts'
 
 const pokemons = [];
 
@@ -19,6 +21,12 @@ export default defineComponent({
   name: "PokeList",
   components: {},
   emits: ["pokemonSelected"],
+  setup(){
+    let storage = ref(importStorage);
+    return {
+      storage,
+    }
+  },
   data() {
     return {
       pokemons,
