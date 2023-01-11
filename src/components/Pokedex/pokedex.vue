@@ -7,18 +7,22 @@
             <div class="pokedex__input">
                 <input type="text">
             </div>
+            <div class="pokedex__pokebola-container">
+                <div class="pokedex_pokebola"></div>
+            </div>
         </div>
-        <div>
-            <aside class="pokedex__sidebar">
+        <div class="pokedex__main">
+            <div class="pokedex__sidebar">
                 <PokeList/>
-            </aside>
+            </div>
 
-            <section class="pokedex__pokemon-info">
+            <div class="pokedex__pokemon-info">
+                sdujiadyusayu
                 <PokeCard/>
-            </section>
+            </div>
         </div>
-        <div class="pokedes__footer">
-            <div class="pokedes__footer-container-test">
+        <div class="pokedex__footer">
+            <div class="pokedex__footer-container-text">
                 <p>Made by llSilverDev</p>
             </div>
         </div>
@@ -50,5 +54,5 @@ export default defineComponent({
 </script>
 
 <style>
-@import './style.scss';
+@import './style.css';
 </style>
