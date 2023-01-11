@@ -1,12 +1,22 @@
 <template>
   <div class="card">
     <div>
+      <!-- nome e id -->
       {{ storage.pokemon_name }}
     </div>
     <div>
-      
+      <!-- Foto -->
     </div>
     <div>
+      <!-- descriçao 
+      abilidades
+      genero 
+      height
+      weight
+      categoria
+      type
+      weaknesses
+      stats -->
       {{ storage.pokemon_info }}
     </div>
   </div>
