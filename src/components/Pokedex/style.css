@@ -62,9 +62,7 @@
   overflow: auto;
 }
 .pokedex__footer {
-  position: fixed;
   color: white;
   background-color: black;
   text-align: center;
-  bottom: 0%;
 }/*# sourceMappingURL=style.css.map */
