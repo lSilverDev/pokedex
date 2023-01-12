@@ -18,9 +18,11 @@
 .card__info-desc {
   color: White;
 }
-.card__info-desc {
+.card__info-hwtw {
+  display: flex;
+  justify-content: space-evenly;
   color: White;
 }
-.card__info-desc {
+.card__info-ab {
   color: White;
 }/*# sourceMappingURL=style.css.map */

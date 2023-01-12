@@ -11,10 +11,11 @@
         Pokemon
       </div>
       <div class="card__info-hwtw">
-        {{ storage.pokemon_info.height }}
-        {{ storage.pokemon_info.weight }}
-        {{ storage.pokemon_info.type }}
-        {{ storage.pokemon_info.weaknesses }}
+        <p>Height: {{ storage.pokemon_info.height }}</p>
+        <p>Weight: {{ storage.pokemon_info.weight }} </p>
+        <p>Type: {{ storage.pokemon_info.type }}</p>
+        <p>Weaknesses: {{ storage.pokemon_info.weaknesses }}</p>
+        
       </div>
       <div class="card__info-ab">
         {{ storage.pokemon_info.abilities }}
