@@ -1,10 +1,24 @@
 <template>
   <div class="card">
-    <div>
+    <div class="card__name">
       {{ storage.pokemon_name }}
     </div>
-    <div>
-      {{ storage.pokemon_info.sprites }}
+    <div class="card__img">
+      
+    </div>
+    <div class="card__info">
+      <div class="card__info-desc">
+        Pokemon
+      </div>
+      <div class="card__info-hwtw">
+        {{ storage.pokemon_info.height }}
+        {{ storage.pokemon_info.weight }}
+        {{ storage.pokemon_info.type }}
+        {{ storage.pokemon_info.weaknesses }}
+      </div>
+      <div class="card__info-ab">
+        {{ storage.pokemon_info.abilities }}
+      </div>
     </div>
     <!-- <div>
       descriçao 
