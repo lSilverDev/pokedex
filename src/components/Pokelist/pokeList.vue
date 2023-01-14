@@ -7,7 +7,7 @@
               keyboard_double_arrow_right
             </span>
           </button>
-          <button @click="getPokemons()">
+          <!-- <button @click="getPokemons()">
             <i class="material-symbols-outlined">fiber_manual_record</i>
           </button>
           <ul class="pokedex__poke-list" v-for="(pokemon, index) in pokemons" :key="index">
@@ -17,7 +17,7 @@
                     <div class="mini-pokebola"></div>
                 </div>
             </li>
-          </ul>
+          </ul> -->
         </div>
       </aside>
     </div>
@@ -34,19 +34,19 @@ export default defineComponent({
   components: {
   },
   data() {
-    let is_expanded = localStorage.getItem("is_expanded") === "true";
+    let is_expanded: Boolean = localStorage.getItem("is_expanded") === "true";
     return { is_expanded, pokemons };
   },
   methods: {
     ToggleMenu() {
       this.is_expanded = !this.is_expanded;
-      localStorage.setItem("is_expanded", this.is_expanded);
+      localStorage.setItem("is_expanded", new Boolean(this.is_expanded).toString());
     },
     getPokemons() {
       axios
         .get("https://pokeapi.co/api/v2/pokemon/?limit=20&offset=20")
         .then((res) => {
-          res.data.results.forEach((element) => {
+          res.data.results.forEach((element: any) => {
             this.pokemons.push(element);
           });
         })
