@@ -13,7 +13,7 @@
         </button>
         <ul v-if="is_expanded" class="pokedex__poke-list" v-for="(pokemon, index) in pokemons" :key="index">
           <li class="pokemon__li" @click="selected(pokemon)">
-            <button>{{ pokemon.name }}</button>
+            <button class="pokemon__btn">{{ pokemon.name }}</button>
           </li>
         </ul>
       </aside>

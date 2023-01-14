@@ -43,6 +43,54 @@ aside {
         }
       }
     }
+    .pokedex__poke-list{
+      display: flex;
+      justify-content: center;
+      padding-left: 0;
+      .pokemon__li{
+          margin: 0 auto;
+          width: 575px;
+          border-radius: 20px;
+          border: 2px solid rgb(121, 121, 121);
+          background-color: white;
+          list-style-type: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: $color-white;
+          font-weight: 550;
+          font-size: large;
+          text-transform: uppercase;
+          padding-left: 0px !important;
+      }
+      .pokemon__li:hover, .pokemon__li:focus-within {
+        box-shadow: 1px 1px 8px 1px $color-orange;
+        outline: none;
+      }
+      .pokemon__btn {
+        text-transform: uppercase;
+        margin-top: .75rem;
+        outline: none;
+        height: 36px;
+        text-align: center;
+        width: 80%;
+        background-color: $color-white;
+        color: $color-black;
+        letter-spacing: 1px;
+        font-size: 12px;
+        font-weight: bold;
+        cursor: pointer;
+        border: 2px $color-blue;
+        border-radius: 40px;
+        .pokemon__btn:hover{
+            color: $color-black;
+            background-color: $color-grey;
+        }
+    }
+      .pokemon__li:hover{
+          border: 2px solid $color-dark-green;
+      }
+  }
     h3,
     .button .text {
       opacity: 0;
@@ -127,29 +175,7 @@ aside {
     }
 }
 
-// .pokedex__poke-list{
-//     display: flex;
-//     justify-content: center;
-//     padding-left: 0;
-//     .pokemon__li{
-//         list-style-type: none;
-//         display: flex;
-//         align-items: center;
-//         justify-content: center;
-//         border: 2px solid black;
-//         border-radius: 5px;
-//         background-color: $color-white;
-//         font-weight: 550;
-//         font-size: large;
-//         text-transform: uppercase;
-//         padding-left: 0px !important;
-//         width: 80%;
-//         height: 36px;
-//     }
-//     .pokemon__li:hover{
-//         border: 2px solid $color-dark-green;
-//     }
-// }
+
 
 
 

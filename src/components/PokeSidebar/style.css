@@ -39,6 +39,54 @@ aside .menu-toggle-wrap .menu-toggle:hover .material-icons {
   color: var(--primary);
   transform: translateX(0.5rem);
 }
+aside .pokedex__poke-list {
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+}
+aside .pokedex__poke-list .pokemon__li {
+  margin: 0 auto;
+  width: 575px;
+  border-radius: 20px;
+  border: 2px solid rgb(121, 121, 121);
+  background-color: white;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFFFF;
+  font-weight: 550;
+  font-size: large;
+  text-transform: uppercase;
+  padding-left: 0px !important;
+}
+aside .pokedex__poke-list .pokemon__li:hover, aside .pokedex__poke-list .pokemon__li:focus-within {
+  box-shadow: 1px 1px 8px 1px #E54222;
+  outline: none;
+}
+aside .pokedex__poke-list .pokemon__btn {
+  text-transform: uppercase;
+  margin-top: 0.75rem;
+  outline: none;
+  height: 36px;
+  text-align: center;
+  width: 80%;
+  background-color: #FFFFFF;
+  color: #000000;
+  letter-spacing: 1px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 2px #5EBDFC;
+  border-radius: 40px;
+}
+aside .pokedex__poke-list .pokemon__btn .pokemon__btn:hover {
+  color: #000000;
+  background-color: #cfcfcf;
+}
+aside .pokedex__poke-list .pokemon__li:hover {
+  border: 2px solid #37796C;
+}
 aside h3,
 aside .button .text {
   opacity: 0;
