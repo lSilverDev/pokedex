@@ -1,15 +1,20 @@
 <template>
-  <Pokedex />
+  <div>
+    <PokedexMenu/>
+    <PokeSidebar />
+  </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import Pokedex from "./components/Pokedex/pokedex.vue";
+import PokeSidebar from "@/components/PokeSidebar/PokeSidebar.vue";
+import PokedexMenu from "@/components/PokedexMenu/PokedexMenu.vue";
 
 export default defineComponent({
   name: "App",
   components: {
-    Pokedex,
+    PokeSidebar,
+    PokedexMenu
   },
 });
 </script>

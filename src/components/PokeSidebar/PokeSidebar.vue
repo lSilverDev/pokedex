@@ -1,5 +1,4 @@
 <template>
-  <div class="dashboard__siderbar">
       <aside :class="`${is_expanded ? 'is-expanded' : ''}`">
         <div class="menu-toggle-wrap">
           <button class="menu-toggle" @click="ToggleMenu">
@@ -20,7 +19,6 @@
           </ul> -->
         </div>
       </aside>
-    </div>
 </template>
 
 <script lang="ts">

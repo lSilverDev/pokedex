@@ -11,20 +11,14 @@
                 <div class="pokedex_pokebola"></div>
             </div> -->
         </div>
-        <div class="pokedex__main">
-            <div class="pokedex__sidebar">
-                <PokeList/>
-            </div>
+        <!-- <div class="pokedex__main">
 
-            <div class="pokedex__pokemon-info">
-                
-            </div>
         </div>
         <div class="pokedex__footer">
             <div class="pokedex__footer-container-text">
                 <p>Made by llSilverDev</p>
             </div>
-        </div>
+        </div> -->
     </div>
         
 
@@ -32,13 +26,11 @@
 
 <script>
 import { defineComponent, ref } from "vue";
-import PokeList from "../Pokelist/pokeList.vue";
 import axios from "axios";
 
 export default defineComponent({
-    name: "pokedex",
+    name: "PokedexMenu",
     components:{
-        PokeList
     }
 })
 </script>
