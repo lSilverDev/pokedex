@@ -1,23 +1,21 @@
 <template>
-      <aside :class="`${is_expanded ? 'is-expanded' : ''}`">
+      <aside  :class="`${is_expanded ? 'is-expanded' : ''}`">
         <div class="menu-toggle-wrap">
           <button class="menu-toggle" @click="ToggleMenu">
             <span class="material-icons">
               keyboard_double_arrow_right
             </span>
           </button>
-          <!-- <button @click="getPokemons()">
-            <i class="material-symbols-outlined">fiber_manual_record</i>
-          </button>
-          <ul class="pokedex__poke-list" v-for="(pokemon, index) in pokemons" :key="index">
-            <li class="pokemon__li" @click="selected(pokemon)">
-              {{ pokemon.name }}
-                <div class="mini__pokebola-container">
-                    <div class="mini-pokebola"></div>
-                </div>
-            </li>
-          </ul> -->
         </div>
+
+        <button v-if="is_expanded" @click="getPokemons()">
+          <i class="material-symbols-outlined">fiber_manual_record</i>
+        </button>
+        <ul v-if="is_expanded" class="pokedex__poke-list" v-for="(pokemon, index) in pokemons" :key="index">
+          <li class="pokemon__li" @click="selected(pokemon)">
+            <button>{{ pokemon.name }}</button>
+          </li>
+        </ul>
       </aside>
 </template>
 

@@ -1,7 +1,7 @@
 aside {
   display: flex;
   flex-direction: column;
-  background-image: url("../../assets/img/backgroundInicial.png");
+  background-color: #cfcfcf;
   width: calc(2rem + 46px);
   overflow: hidden;
   min-height: 100vh;
@@ -36,26 +36,6 @@ aside .menu-toggle-wrap .menu-toggle .material-icons {
   transition: 0.2s ease-out;
 }
 aside .menu-toggle-wrap .menu-toggle:hover .material-icons {
-  color: var(--primary);
-  transform: translateX(0.5rem);
-}
-aside .menu-toggle-wrap__sidebar-closed {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 1rem;
-  position: absolute;
-  top: 10px;
-  transition: 0.2s ease-in-out;
-}
-aside .menu-toggle-wrap__sidebar-closed .menu-toggle {
-  transition: 0.2s ease-in-out;
-}
-aside .menu-toggle-wrap__sidebar-closed .menu-toggle .material-icons {
-  font-size: 2rem;
-  color: #f1f5f9;
-  transition: 0.2s ease-out;
-}
-aside .menu-toggle-wrap__sidebar-closed .menu-toggle:hover .material-icons {
   color: var(--primary);
   transform: translateX(0.5rem);
 }
