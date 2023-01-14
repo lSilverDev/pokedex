@@ -7,9 +7,9 @@
             <div class="pokedex__input">
                 <input type="text">
             </div>
-            <div class="pokedex__pokebola-container">
+            <!-- <div class="pokedex__pokebola-container">
                 <div class="pokedex_pokebola"></div>
-            </div>
+            </div> -->
         </div>
         <div class="pokedex__main">
             <div class="pokedex__sidebar">
@@ -34,7 +34,6 @@
 import { defineComponent, ref } from "vue";
 import PokeList from "../Pokelist/pokeList.vue";
 import PokeCard from "../Pokecard/pokeCard.vue";
-import importStorage from '@/storage/storage.ts';
 import axios from "axios";
 
 export default defineComponent({
@@ -42,12 +41,6 @@ export default defineComponent({
     components:{
         PokeList,
         PokeCard
-    },
-    setup(){
-        let storage = ref(importStorage);
-        return {
-            storage,
-        }
     }
 })
 </script>
