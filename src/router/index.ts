@@ -1,7 +1,7 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
 import Home from "../views/Pokedex.vue";
 
-const rotas: RouteRecordRaw[] = [
+const routes: RouteRecordRaw[] = [
     {
         path: '/',
         name: 'Home',
@@ -9,10 +9,10 @@ const rotas: RouteRecordRaw[] = [
     }
 ];
 
-const roteador = createRouter({
+const router = createRouter({
     history: createWebHashHistory(),
-    routes: rotas
+    routes: routes
 })
 
 
-export default roteador;
+export default router;

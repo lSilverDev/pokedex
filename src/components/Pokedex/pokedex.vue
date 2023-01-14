@@ -17,7 +17,7 @@
             </div>
 
             <div class="pokedex__pokemon-info">
-                <PokeCard/>
+                
             </div>
         </div>
         <div class="pokedex__footer">
@@ -33,14 +33,12 @@
 <script>
 import { defineComponent, ref } from "vue";
 import PokeList from "../Pokelist/pokeList.vue";
-import PokeCard from "../Pokecard/pokeCard.vue";
 import axios from "axios";
 
 export default defineComponent({
     name: "pokedex",
     components:{
-        PokeList,
-        PokeCard
+        PokeList
     }
 })
 </script>
