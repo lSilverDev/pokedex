@@ -5,7 +5,7 @@
         </button>
         <ul v-if="is_expanded" class="pokedex__poke-list" v-for="(pokemon, index) in pokemons" :key="index">
           <li class="pokemon__li" @click="selected(pokemon)">
-            <img style="width: 25px !important; height: 25px !important;" src="https://www.pngkit.com/png/full/312-3123953_pokeball-pokemon-ball-8-bit.png" alt="pokebola">
+            <img class="pokemon__btn_pokebola" src="https://www.pngkit.com/png/full/312-3123953_pokeball-pokemon-ball-8-bit.png" alt="pokebola">
             <button class="pokemon__btn">{{ pokemon.name }}</button>
           </li>
         </ul>
@@ -14,9 +14,10 @@
 
 <script lang="ts">
 import axios from "axios";
+import type IPokemon from "../../interfaces/IPokemon"
 import { defineComponent } from "vue";
 
-const pokemons = [] as Array<Pokemon>[];
+const pokemons = [] as Array<IPokemon>[];
 
 export default defineComponent({
   name: "PokeSidebar",
@@ -24,7 +25,10 @@ export default defineComponent({
   },
   data() {
     let is_expanded: Boolean = localStorage.getItem("is_expanded") === "true";
-    return { is_expanded, pokemons };
+    return { 
+      is_expanded: false,
+      pokemons
+    };
   },
   methods: {
     ToggleMenu() {

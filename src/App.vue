@@ -1,8 +1,6 @@
 <template>
-  <div>
     <PokedexMenu/>
-    <PokeSidebar />
-  </div>
+    <PokeSidebar/>
 </template>
 
 <script lang="ts">

@@ -64,6 +64,10 @@ aside .pokedex__poke-list .pokemon__li:hover, aside .pokedex__poke-list .pokemon
   box-shadow: 1px 1px 8px 1px #E54222;
   outline: none;
 }
+aside .pokedex__poke-list .pokemon__btn_pokebola {
+  width: 25px !important;
+  height: 25px !important;
+}
 aside .pokedex__poke-list .pokemon__btn {
   text-transform: uppercase;
   margin-top: 0.75rem;

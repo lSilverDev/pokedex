@@ -67,6 +67,10 @@ aside {
         box-shadow: 1px 1px 8px 1px $color-orange;
         outline: none;
       }
+      .pokemon__btn_pokebola{
+        width: 25px !important;
+        height: 25px !important;
+      }
       .pokemon__btn {
         text-transform: uppercase;
         margin-top: .75rem;
