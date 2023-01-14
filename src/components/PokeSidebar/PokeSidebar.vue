@@ -16,7 +16,7 @@
 import axios from "axios";
 import { defineComponent } from "vue";
 
-const pokemons = [];
+const pokemons = [] as Array<Pokemon>[];
 
 export default defineComponent({
   name: "PokeSidebar",
