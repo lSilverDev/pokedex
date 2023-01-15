@@ -11,6 +11,15 @@ import axios from "axios";
 export default defineComponent({
     name: "PokemonCard",
     components:{
+    },
+    props: {
+        pokemon : {
+            type: Array<any>,
+            default: null
+        }
+    },
+    computed: {
+
     }
 })
 </script>
