@@ -19,7 +19,7 @@ export default defineComponent({
   emits:['infoCatched'],
   props: {
     pokemon : {
-        type: Object,
+        type: String,
         default: null
     }
   },
@@ -33,10 +33,9 @@ export default defineComponent({
     PokedexMenu,
   },
   methods: {
-    pokemonCatchInfo(pokemon: Object) {
-      console.log(pokemon);
+    pokemonCatchInfo(pokemon: string) {
         axios
-        .get(pokemon.url)
+        .get(pokemon)
         .then((res) => {
             this.pokemon_info = res.data;
             this.$emit('infoCatched', pokemon_info);

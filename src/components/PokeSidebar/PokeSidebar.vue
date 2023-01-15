@@ -13,10 +13,11 @@
 </template>
 
 <script lang="ts">
+import type IPokemon from "@/interfaces/IPokemon";
 import axios from "axios";
 import { defineComponent } from "vue";
 
-const pokemons = [] as Array<any>[];
+const pokemons = [] as Array<IPokemon>[];
 
 export default defineComponent({
   name: "PokeSidebar",
@@ -48,8 +49,8 @@ export default defineComponent({
           console.log(error);
         });
     },
-    pokemonSelected(pokemon: any){
-      this.$emit('pokemonSelected', pokemon);
+    pokemonSelected(pokemon: IPokemon){
+      this.$emit('pokemonSelected', pokemon.url);
     },
   },
 });
