@@ -33,6 +33,11 @@
   box-shadow: 1px 1px 8px 1px #000000;
   outline: none;
 }
+.pokedex__menu .pokedex__profile img {
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+}
 .pokedex__menu .pokedex__pokebola-container {
   width: 12rem;
   height: 12rem;

@@ -7,6 +7,11 @@
             <div class="pokedex__input">
                 <input type="text">
             </div>
+            <div class="pokedex__profile">
+                <div class="pokedex__profile_img_Container">
+                    <img src="https://gkpb.com.br/wp-content/uploads/2022/12/ash-pikachu-deixam-pokemon1-e1671196677262.jpg" alt="user"></img>
+                </div>
+            </div>
             <!-- <div class="pokedex__pokebola-container">
                 <div class="pokedex_pokebola"></div>
             </div> -->
