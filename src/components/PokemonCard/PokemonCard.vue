@@ -1,6 +1,6 @@
 <template>
-    <div class="pokemonCard">
-        <div style="display: flex; flex-direction: row; justify-content: space-between;">
+    <div class="pokemonCard" style="border: 1px solid black; padding: 10px; margin: 10px;">
+        <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
             <div>
                 <img src="https://img.pokemondb.net/artwork/avif/bulbasaur.avif" alt="">
             </div>
@@ -16,7 +16,7 @@
                 </ul>
             </div>  
         </div>
-        <div>
+        <div style="text-align: center;">
             BASE STATS
         </div>
     </div>
