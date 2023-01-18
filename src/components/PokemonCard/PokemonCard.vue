@@ -2,7 +2,7 @@
     <div class="pokemonCard">
         <div style="display: flex; flex-direction: row; justify-content: space-between;">
             <div>
-                <img src="" alt="">
+                <img src="https://img.pokemondb.net/artwork/avif/bulbasaur.avif" alt="">
             </div>
             <div>
                 <ul>
