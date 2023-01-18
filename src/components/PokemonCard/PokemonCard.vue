@@ -1,6 +1,24 @@
 <template>
     <div class="pokemonCard">
-        <p>oi</p>
+        <div>
+            <div>
+                <img src="" alt="">
+            </div>
+            <div>
+                <ul>
+                    <li>National N</li>
+                    <li>Type</li>
+                    <li>Species</li>
+                    <li>Height</li>
+                    <li>Weight</li>
+                    <li>Abilities</li>
+                    <li>Local N</li>
+                </ul>
+            </div>  
+        </div>
+        <div>
+            BASE STATS
+        </div>
     </div>
 </template>
 
