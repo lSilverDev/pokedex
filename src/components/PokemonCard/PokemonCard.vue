@@ -1,18 +1,18 @@
 <template>
     <div class="pokemonCard">
-        <div>
+        <div style="display: flex; flex-direction: row; justify-content: space-between;">
             <div>
                 <img src="" alt="">
             </div>
             <div>
                 <ul>
-                    <li>National N</li>
-                    <li>Type</li>
-                    <li>Species</li>
-                    <li>Height</li>
-                    <li>Weight</li>
-                    <li>Abilities</li>
-                    <li>Local N</li>
+                    <li>National N: </li>
+                    <li>Type: </li>
+                    <li>Species: </li>
+                    <li>Height:</li>
+                    <li>Weight:</li>
+                    <li>Abilities:</li>
+                    <li>Local N:</li>
                 </ul>
             </div>  
         </div>
