@@ -1,6 +1,6 @@
 <template>
     <div class="pokemonCard">
-        
+        <p>oi</p>
     </div>
 </template>
 
@@ -10,17 +10,9 @@ import axios from "axios";
 
 export default defineComponent({
     name: "PokemonCard",
-    components:{
-    },
-    props: {
-        pokemon : {
-            type: Array<any>,
-            default: null
-        }
-    },
     computed: {
 
-    }
+    },
 })
 </script>
 

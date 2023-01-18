@@ -1,15 +1,20 @@
 <template>
-  <div>
-    <PokedexMenu/>
-    <PokeSidebar @pokemonSelected="pokemonCatchInfo"/>
-  </div>
-    
+  <PokedexMenu/>
+  <main style="display: flex; flex-direction: row;">
+    <div>
+      <PokeSidebar @pokemonSelected="pokemonCatchInfo"/>
+    </div>
+    <div>
+      <PokemonCard/>
+    </div>
+  </main>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 import PokeSidebar from "@/components/PokeSidebar/PokeSidebar.vue";
 import PokedexMenu from "@/components/PokedexMenu/PokedexMenu.vue";
+import PokemonCard from "@/components/PokemonCard/PokemonCard.vue";
 import axios from "axios";
 
 const pokemon_info: any = [];
@@ -31,6 +36,7 @@ export default defineComponent({
   components: {
     PokeSidebar,
     PokedexMenu,
+    PokemonCard
   },
   methods: {
     pokemonCatchInfo(pokemon: string) {
