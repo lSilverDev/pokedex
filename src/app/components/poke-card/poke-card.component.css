@@ -1,0 +1,9 @@
+.card__row{
+  display: flex;
+  flex-direction: row;
+}
+
+.card__pokeside, .status{
+  display: flex;
+  flex-direction: column;
+}

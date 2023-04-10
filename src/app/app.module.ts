@@ -7,6 +7,7 @@ import { PokeListComponent } from './components/poke-list/poke-list.component';
 import { PokeCardComponent } from './components/poke-card/poke-card.component';
 import { PokeDetailsComponent } from './components/poke-details/poke-details.component';
 import { TypeListComponent } from './components/type-list/type-list.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { TypeListComponent } from './components/type-list/type-list.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
