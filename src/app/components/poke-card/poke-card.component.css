@@ -1,9 +1,61 @@
 .card__row{
   display: flex;
   flex-direction: row;
+  width: 100%;
 }
 
-.card__pokeside, .status{
+.card__pokeside{
   display: flex;
   flex-direction: column;
+}
+
+.status{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 4em;
+  background-color: lightgray;
+}
+
+.card__pokeside{
+  background-color: white;
+  border-radius: 20px;
+  margin: 4em;
+  width: 18em;
+  background-color: lightgray;
+}
+
+.container_heigth-weight{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.heigth, .weight{
+  border-radius: 100%;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  width: 3em;
+  height: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container_sprite-number{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sprint{
+
+}
+
+.card_detail{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }

@@ -1,16 +1,20 @@
-<div class="card__row">
+<div class="card__row" *ngFor="let pokemon of pokeList">
   <div class="card__pokeside">
-    <div class="heigth">
-
+    <div class="container_heigth-weight">
+      <div class="heigth">
+        20
+      </div>
+      <div class="weight">
+        30
+      </div>
     </div>
-    <div class="weight">
-
+    <div class="container_sprite-number">
+      <Div class="background__text">
+        #150
+      </Div>
+      <img class="sprint" src="" alt="">
     </div>
-    <Div>
-
-    </Div>
-    <img src="" alt="">
-    <div>
+    <div class="card_detail">
       <h3>Pokemon name</h3>
       <p>Generatic</p>
       <div>
