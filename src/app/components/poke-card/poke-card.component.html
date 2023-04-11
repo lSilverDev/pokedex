@@ -1,35 +1,35 @@
 <div class="card__row" *ngFor="let pokemon of pokeList">
   <div class="card__pokeside">
     <div class="container_heigth-weight">
-      <div class="heigth">
-        20
+      <div class="height">
+        {{pokemon.height}}
       </div>
       <div class="weight">
-        30
+        {{pokemon.weight}}
       </div>
     </div>
     <div class="container_sprite-number">
       <Div class="background__text">
-        #150
+        {{pokemon.id}}
       </Div>
-      <img class="sprint" src="" alt="">
+      <img class="sprint" src="{{pokemon.sprites['front_default']}}" alt="">
     </div>
     <div class="card_detail">
-      <h3>Pokemon name</h3>
-      <p>Generatic</p>
-      <div>
-        types
+      <h3>{{pokemon.name}}</h3>
+      <p>{{pokemon.species["name"]}}</p>
+      <div *ngFor="let type of pokemon.types">
+        <p>{{type}}</p>
       </div>
-      <p>hab</p>
+      <p>{{pokemon.location_area_encounters}}</p>
     </div>
   </div>
   <div class="status">
-    <p>Speed</p>
-    <p>Speed</p>
-    <p>Speed</p>
-    <p>Speed</p>
-    <p>Speed</p>
-    <p>Speed</p>
+    <p>Speed {{pokemon.stats[5]}}</p>
+    <p>Special Defense {{pokemon.stats[4]}}</p>
+    <p>Special Attack {{pokemon.stats[3]}}</p>
+    <p>Defense {{pokemon.stats[2]}}</p>
+    <p>Attack {{pokemon.stats[1]}}</p>
+    <p>Hp {{pokemon.stats[0]}}</p>
   </div>
 </div>
 

@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment.development';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, tap } from 'rxjs';
+import { Pokemon } from '../interface/pokemon';
 
 @Injectable({
   providedIn: 'root'
@@ -15,8 +16,10 @@ export class PokeServiceService {
     return this.http.get(this.API + "pokemon/");
   }
 
-  getPokemonDetails(path: any): Observable<any> {
-    return this.http.get(path);
+  getPokemonDetails(path: string): Observable<Pokemon> {
+    return this.http.get<Pokemon>(path).pipe(
+      tap((retorno) => console.log(retorno)),
+    );
   }
 
   getTypes(): Observable<any> {

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Pokemon } from 'src/app/interface/pokemon';
 import { PokeServiceService } from 'src/app/service/poke-service.service';
 
 @Component({
@@ -7,7 +8,7 @@ import { PokeServiceService } from 'src/app/service/poke-service.service';
   styleUrls: ['./poke-card.component.css']
 })
 export class PokeCardComponent {
-  pokeList = [];
+  pokeList: any = [];
 
   constructor(private service: PokeServiceService){}
 
@@ -25,10 +26,34 @@ export class PokeCardComponent {
   getDetails(pokemonList: any){
     pokemonList.forEach((element: { url: string; }) => {
       this.service.getPokemonDetails(element.url).subscribe((pokemon) => {
-        this.pokeList = pokemon;
+        this.doPokemon(pokemon)
       });
     });
-    console.log(this.pokeList);
+  }
+
+  doPokemon(pokeDetails: Pokemon){
+    let pokemon = {
+      abilities: pokeDetails.abilities,
+      base_experience: pokeDetails.base_experience,
+      forms: pokeDetails.forms,
+      game_indices: pokeDetails.game_indices,
+      height: pokeDetails.height,
+      held_items: pokeDetails.held_items,
+      id: pokeDetails.id,
+      is_default: pokeDetails.is_default,
+      location_area_encounters: pokeDetails.location_area_encounters,
+      moves: pokeDetails.moves,
+      name: pokeDetails.name,
+      order: pokeDetails.order,
+      past_types: pokeDetails.past_types,
+      species: pokeDetails.species,
+      sprites: pokeDetails.sprites,
+      stats: pokeDetails.stats,
+      types: pokeDetails.types,
+      weight: pokeDetails.weight
+    }
+
+    this.pokeList.push(pokemon);
   }
 }
 
