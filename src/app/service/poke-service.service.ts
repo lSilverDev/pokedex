@@ -15,6 +15,10 @@ export class PokeServiceService {
     return this.http.get(this.API + "pokemon/");
   }
 
+  getPokemonDetails(path: any): Observable<any> {
+    return this.http.get(path);
+  }
+
   getTypes(): Observable<any> {
     return this.http.get(this.API + "type");
   }

@@ -12,9 +12,24 @@ export class PokeCardComponent {
   constructor(private service: PokeServiceService){}
 
   ngOnInit(){
+    this.getPokemonList();
+  }
+
+  getPokemonList(){
     this.service.getPokemons().subscribe((list) => {
-      let details = list.results;
-      // logica de pegar as informaçoes detalhadas dos pokemons
+      let pokemonList = list.results;
+      this.getDetails(pokemonList);
     });
   }
+
+  getDetails(pokemonList: any){
+    pokemonList.forEach((element: { url: string; }) => {
+      this.service.getPokemonDetails(element.url).subscribe((pokemon) => {
+        this.pokeList = pokemon;
+      });
+    });
+    console.log(this.pokeList);
+  }
 }
+
+
