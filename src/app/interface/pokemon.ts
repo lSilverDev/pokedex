@@ -179,8 +179,6 @@ export interface Type {
   type: Species;
 }
 
-// Converts JSON strings to/from your types
-// and asserts the results of JSON.parse at runtime
 export class Convert {
   public static toPokemon(json: string): Pokemon {
     return cast(JSON.parse(json), r('Pokemon'));

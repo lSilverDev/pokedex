@@ -4,6 +4,11 @@
   width: 100%;
 }
 
+.card__row:hover{
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 20px;
+}
+
 .card__pokeside{
   display: flex;
   flex-direction: column;

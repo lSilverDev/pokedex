@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { Pokemon } from 'src/app/interface/pokemon';
 import { PokeServiceService } from 'src/app/service/poke-service.service';
 
@@ -7,8 +8,9 @@ import { PokeServiceService } from 'src/app/service/poke-service.service';
   templateUrl: './poke-card.component.html',
   styleUrls: ['./poke-card.component.css']
 })
-export class PokeCardComponent {
+export class PokeCardComponent implements OnDestroy{
   pokeList: any = [];
+  subscription: Subscription = new Subscription;
 
   constructor(private service: PokeServiceService){}
 
@@ -17,9 +19,12 @@ export class PokeCardComponent {
   }
 
   getPokemonList(){
-    this.service.getPokemons().subscribe((list) => {
-      let pokemonList = list.results;
-      this.getDetails(pokemonList);
+    this.subscription = this.service.getPokemons().subscribe({
+      next: (urls) => {
+        let pokemonList = urls.results;
+        this.getDetails(pokemonList);
+      },
+      error: erro => console.error(erro),
     });
   }
 
@@ -54,6 +59,14 @@ export class PokeCardComponent {
     }
 
     this.pokeList.push(pokemon);
+  }
+
+  openPokemonDetailsCard(){
+
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe()
   }
 }
 

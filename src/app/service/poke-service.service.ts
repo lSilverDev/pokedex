@@ -17,9 +17,7 @@ export class PokeServiceService {
   }
 
   getPokemonDetails(path: string): Observable<Pokemon> {
-    return this.http.get<Pokemon>(path).pipe(
-      tap((retorno) => console.log(retorno)),
-    );
+    return this.http.get<Pokemon>(path);
   }
 
   getTypes(): Observable<any> {
