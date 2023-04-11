@@ -14,7 +14,7 @@ export class PokeCardComponent {
   ngOnInit(){
     this.service.getPokemons().subscribe((list) => {
       let details = list.results;
-      // logica de pegar as informaloes detalhadas dos pokemons
+      // logica de pegar as informaçoes detalhadas dos pokemons
     });
   }
 }
