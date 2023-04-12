@@ -8,7 +8,6 @@
 .aside_list{
   display: flex;
   flex-direction: column;
-  background-color: lightgray;
 }
 
 .card__list{

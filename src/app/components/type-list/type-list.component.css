@@ -1,11 +1,12 @@
 .aside_column{
   display: flex;
   flex-direction: column;
+  background-color: var(--dark-gray);
 }
 
 .type_btn{
   margin: .5em;
   padding: .5em;
   border: none;
-  background-color: rgba(252, 251, 251, 0.87);
+  background-color: var(--white);
 }
