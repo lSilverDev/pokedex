@@ -15,18 +15,18 @@
       <img class="sprinte" src="{{pokemon.sprites['front_default']}}" alt="">
     </div>
     <div class="card_detail">
-      <h3>{{pokemon.name}}</h3>
-      <p>{{pokemon.species["name"]}}</p>
-      <div *ngFor="let type of pokemon.types">
-        <p>{{type.type['name']}}</p>
+      <h3 class="pokemon_name">{{pokemon.name}}</h3>
+      <p class="pokemon_specie">{{pokemon.species["name"]}}</p>
+      <div class="type_row" >
+        <p *ngFor="let type of pokemon.types">{{type.type['name']}}</p>
       </div>
-      <p>{{pokemon.location_area_encounters}}</p>
     </div>
   </div>
   <div class="status" >
-    <p *ngFor="let stats of pokemon.stats">
-      {{stats.stat['name']}} - {{stats.base_stat}}
-    </p>
+    <div class="stats__row" *ngFor="let stats of pokemon.stats">
+      <p class="stats_names">{{stats.stat['name']}}</p>
+      <p class="stats_value">{{stats.base_stat}}</p>
+    </div>
   </div>
 </div>
 

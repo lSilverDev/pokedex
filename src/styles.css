@@ -1,4 +1,30 @@
+:root{
+  /* screen sizes */
+  --screen-mobile: 375px;
+  --screen-desktop: 1440px;
+
+  /* cores */
+
+  /* primarias */
+  --very-dark-gray: hsl(0, 0%, 17%);
+  --dark-gray: hsl(0, 0%, 59%);
+  --white: white;
+
+  /* Body Copy */
+  --font-size-title: 18px;
+  --font-size-normal: 12px;
+  --font-size-info: 24px;
+
+  /* Font */
+  --font-family-press: 'Press Start 2P', cursive;
+  --font-weight-400: 400;
+}
+
 *{
   margin: 0;
   padding: 0;
+}
+
+body{
+  font-family: var(--font-family-press);
 }
