@@ -42,14 +42,20 @@
   justify-content: center;
 }
 
+.background__text{
+  color: var(--white);
+  font-size: var( --font-size-id);
+  position: absolute;
+}
+
 .container_sprite-number{
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.sprint{
-
+.sprinte{
+  z-index:1000;
 }
 
 .card_detail{
@@ -75,6 +81,12 @@
   justify-content: space-evenly;
   width: 100%;
   margin: .5em;
+}
+
+.type_name{
+  background-color: rgba(255, 0, 0, 0.267);
+  padding: .5em;
+  border-radius: 20px;
 }
 
 .status{
