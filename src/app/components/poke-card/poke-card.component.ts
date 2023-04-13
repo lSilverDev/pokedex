@@ -1,52 +1,21 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { Subscription } from 'rxjs';
 import { Pokemon } from 'src/app/models/pokemon';
-import { pokemonInfo } from 'src/app/models/pokemonInfo';
-import { PokeServiceService } from 'src/app/service/poke-service.service';
 
 @Component({
   selector: 'app-poke-card',
   templateUrl: './poke-card.component.html',
   styleUrls: ['./poke-card.component.css']
 })
-export class PokeCardComponent implements OnDestroy{
-  pokeList: pokemonInfo[] = [];
-  subscription: Subscription = new Subscription;
+export class PokeCardComponent{
+  @Input() pokeList?: Pokemon[];
 
-
-  constructor(private service: PokeServiceService, private router: Router){}
-
-  ngOnInit(){
-    this.getPokemonList();
-  }
-
-  getPokemonList(){
-    this.subscription = this.service.getPokemons().subscribe({
-      next: (urls) => {
-        let pokemonList = urls.results;
-        this.getDetails(pokemonList);
-      },
-      error: erro => console.error(erro),
-    });
-  }
-
-  getDetails(pokemonList: any){
-    pokemonList.forEach((element: { url: string; }) => {
-      this.service.getPokemonDetails(element.url).subscribe((pokemon) => {
-        this.pokeList.push(pokemon);
-      });
-    });
-  }
+  constructor(private router: Router){}
 
   openPokemonDetailsCard(pokemon: Pokemon){
     this.router.navigateByUrl("/pokemonDetails", {
       state: {pokemon: pokemon}
     });
-  }
-
-  ngOnDestroy() {
-    this.subscription.unsubscribe()
   }
 }
 
