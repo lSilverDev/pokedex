@@ -4,13 +4,3 @@
   width: 100vw;
   height: 100vh;
 }
-
-.aside_list{
-  display: flex;
-  flex-direction: column;
-}
-
-.card__list{
-  display: flex;
-  flex-direction: column;
-}
