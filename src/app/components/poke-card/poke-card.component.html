@@ -1,4 +1,4 @@
-<div class="card__row" *ngFor="let pokemon of pokeList" (click)="openPokemonDetailsCard(pokemon)">
+<section class="card__row" *ngFor="let pokemon of pokeList" (click)="openPokemonDetailsCard(pokemon)">
   <div class="card__pokeside">
     <div class="container_heigth-weight">
       <div class="height">
@@ -28,5 +28,5 @@
       <p class="stats_value">{{stats.base_stat}}</p>
     </div>
   </div>
-</div>
+</section>
 

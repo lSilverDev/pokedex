@@ -1,1 +1,49 @@
-<p>{{pokemon.name}}</p>
+<section>
+  <header>
+    <div>
+      <p>PokedexDoDudu</p>
+    </div>
+
+    <div>
+      <input type="text">
+    </div>
+  </header>
+  <main>
+    <div class="pokemon_section">
+      <img src="{{pokemon.sprites['front_default']}}" alt="{{pokemon.name}}">
+      <div>
+        <p>{{pokemon.name}}</p>
+        <p>{{pokemon.id}}</p>
+      </div>
+      <div>
+          <button class="type_btn" *ngFor="let type of pokemon.types">{{type.type['name']}}</button>
+      </div>
+    </div>
+
+    <div class="envolv_line">
+      <p>Pegas a linha evolutiva</p>
+    </div>
+
+    <div class="abilities_section">
+      <div class="ability__row" *ngFor="let abilities of pokemon.abilities">
+        <p class="ability_names">{{abilities.ability['name']}}</p>
+        <p class="ability_value">{{abilities.is_hidden}}</p>
+      </div>
+    </div>
+
+    <div class="extra_section">
+      <p>Pegas as informaçoes extras</p>
+    </div>
+
+    <div class="stats_section">
+      <div class="stats__row" *ngFor="let stats of pokemon.stats">
+        <p class="stats_names">{{stats.stat['name']}}</p>
+        <p class="stats_value">{{stats.base_stat}}</p>
+      </div>
+    </div>
+
+    <div class="damage-chart_section">
+      <p>Pegas o damage chart</p>
+    </div>
+  </main>
+</section>

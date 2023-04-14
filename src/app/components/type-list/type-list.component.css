@@ -7,9 +7,17 @@
   height: 100%;
 }
 
+.pokeBall_btn{
+  margin: .5em;
+  padding: .5em;
+  color: white;
+  background-color: red;
+}
+
 .type_btn{
   margin: .5em;
   padding: .5em;
   border: none;
   background-color: var(--white);
 }
+

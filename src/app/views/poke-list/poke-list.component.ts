@@ -32,6 +32,7 @@ export class PokeListComponent {
   getDetails(pokemonList: any){
     pokemonList.forEach((element: { url: string; }) => {
       this.service.getPokemonDetails(element.url).subscribe((pokemon) => {
+        console.log(pokemon);
         this.pokeList.push(pokemon);
       });
     });
