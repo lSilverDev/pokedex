@@ -1,8 +1,10 @@
 .aside_column{
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   background-color: var(--dark-gray);
   position: fixed;
+  height: 100%;
 }
 
 .type_btn{
