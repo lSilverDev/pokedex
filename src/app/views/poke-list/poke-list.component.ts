@@ -47,6 +47,15 @@ export class PokeListComponent {
           });
         } else {
           this.pokeList.push(pokemon);
+          this.pokeList.sort((a, b) => {
+            if (a.id < b.id) {
+              return -1;
+            }
+            if (a.id > b.id) {
+              return 1;
+            }
+            return 0;
+          });
         }
       });
     });
@@ -55,7 +64,7 @@ export class PokeListComponent {
   loadMorePokemons(){
     this.limit += 20;
     this.offset += 20;
-
+    this.pokemonListPath = [];
     this.service.getPokemons(this.limit, this.offset).subscribe({
       next: (urls) => {
         this.pokemonListPath.push(...urls.results);
