@@ -1,0 +1,14 @@
+.pokemon-detail__header{
+  display: flex;
+  justify-content: space-between;
+  margin: 1.5em;
+}
+
+.return_btn{
+  padding: 1em;
+  width: 12em;
+  font-size: var(--font-size-normal);
+  font-family: var(--font-family-press);
+  border: var(--gray);
+}
+

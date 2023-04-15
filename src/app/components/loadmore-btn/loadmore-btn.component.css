@@ -1,0 +1,11 @@
+.loadBtn_container, .noPokemons_container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loadBtn{
+  padding: 1em;
+  border: 1px solid var(--gray);
+  margin: 1em;
+}

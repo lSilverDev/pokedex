@@ -1,6 +1,10 @@
-<button style="padding: 1em;" *ngIf="morePokemons; else noPokemons">
-  Loadmore Pokemons
-</button>
-<ng-template #noPokemons>
-  <p>there arent more pokemons</p>
-</ng-template>
+<div class="loadBtn_container">
+  <button class="loadBtn" *ngIf="morePokemons; else noPokemons">
+    Loadmore Pokemons
+  </button>
+  <ng-template #noPokemons>
+    <div class="noPokemons_container">
+      <p>there arent more pokemons</p>
+    </div>
+  </ng-template>
+</div>
