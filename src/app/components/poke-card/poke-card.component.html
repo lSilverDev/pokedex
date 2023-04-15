@@ -1,28 +1,27 @@
-<section class="card__row" *ngFor="let pokemon of pokeList" (click)="openPokemonDetailsCard(pokemon)">
-  <div class="card__pokeside">
-    <div class="container_heigth-weight">
-      <div class="height">
-        {{pokemon.height}}m
+<section class="container_card">
+  <div class="card__row" *ngFor="let pokemon of pokeList" (click)="openPokemonDetailsCard(pokemon)">
+    <div class="card__pokeside">
+      <div class="container_heigth-weight">
+        <div class="height">
+          {{pokemon.height}}m
+        </div>
+        <div class="weight">
+          {{pokemon.weight}}Kg
+        </div>
       </div>
-      <div class="weight">
-        {{pokemon.weight}}Kg
+      <div class="container_sprite-number">
+        <Div class="background__text">
+          #{{pokemon.id}}
+        </Div>
+        <img class="sprinte" src="{{pokemon.sprites['front_default']}}" alt="">
       </div>
-    </div>
-    <div class="container_sprite-number">
-      <Div class="background__text">
-        #{{pokemon.id}}
-      </Div>
-      <img class="sprinte" src="{{pokemon.sprites['front_default']}}" alt="">
-    </div>
-    <div class="card_detail">
-      <h3 class="pokemon_name">{{pokemon.name}}</h3>
-      <p class="pokemon_specie">{{pokemon.species["name"]}}</p>
-      <div class="type_row" >
-        <p class="type_name" *ngFor="let type of pokemon.types">{{type.type['name']}}</p>
+      <div class="card_detail">
+        <h3 class="pokemon_name">{{pokemon.name}}</h3>
+        <p class="pokemon_specie">{{pokemon.species["name"]}}</p>
+        <div class="type_row" >
+          <p class="type_name" *ngFor="let type of pokemon.types">{{type.type['name']}}</p>
+        </div>
       </div>
     </div>
   </div>
-  <app-status-graph [pokemonStats]="pokemon.stats"></app-status-graph>
-
 </section>
-

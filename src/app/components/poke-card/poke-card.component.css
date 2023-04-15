@@ -1,8 +1,11 @@
-.card__row{
+.container_card{
   display: flex;
   flex-direction: row;
-  width: 100%;
-  margin: 1em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card__row{
   font-size: var(--font-size-normal);
 }
 
