@@ -8,6 +8,7 @@ import { PokeCardComponent } from './components/poke-card/poke-card.component';
 import { PokeDetailsComponent } from './views/poke-details/poke-details.component';
 import { TypeListComponent } from './components/type-list/type-list.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

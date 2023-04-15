@@ -9,6 +9,7 @@ import { Pokemon } from 'src/app/models/pokemon';
 })
 export class PokeDetailsComponent {
   pokemon: Pokemon;
+  searchPokemonDetail: string = '';
 
   constructor(private router: Router) {
     const nav = this.router.getCurrentNavigation();
