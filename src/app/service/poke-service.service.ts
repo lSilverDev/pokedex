@@ -12,9 +12,11 @@ export class PokeServiceService {
 
   constructor(private http: HttpClient) { }
 
-  getPokemons(itensPage: number): Observable<any> {
+  getPokemons(limit: number, offset: number): Observable<any> {
+
     let params = new HttpParams()
-                 .set('?limit', 10000)
+                 .set('?limit', limit)
+                 .set('?offset', offset - 20)
 
     return this.http.get(`${this.API}pokemon/${ params}`);
   }

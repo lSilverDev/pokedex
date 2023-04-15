@@ -13,7 +13,8 @@ export class PokeListComponent {
   pokeList: pokemonInfo[] = [];
   pokemonListPath: Pokemon[] = [];
   subscription: Subscription = new Subscription;
-  currentPage: number = 20;
+  offset: number = 20;
+  limit: number = 20;
   morePokemons: boolean = true;
 
 
@@ -24,7 +25,7 @@ export class PokeListComponent {
   }
 
   getPokemonList(){
-    this.subscription = this.service.getPokemons(this.currentPage).subscribe({
+    this.subscription = this.service.getPokemons(this.limit, this.offset).subscribe({
       next: (urls) => {
         this.pokemonListPath.push(...urls.results);
         this.getDetails(this.pokemonListPath);
@@ -42,18 +43,17 @@ export class PokeListComponent {
     });
   }
 
-  changeMorePokemons(){
-    this.currentPage+=20;
-    this.service.getPokemons(this.currentPage).subscribe({
+  loadMorePokemons(){
+    this.limit += 20;
+    this.offset += 20;
+
+    this.service.getPokemons(this.limit, this.offset).subscribe({
       next: (urls) => {
-        console.log("req");
-        this.pokemonListPath.push(urls.results);
+        this.pokemonListPath.push(...urls.results);
         this.pokeList = [];
-        console.log(this.currentPage);
         if(this.pokemonListPath.length == 10000){
           this.morePokemons = false;
         }
-
         this.getDetails(this.pokemonListPath);
       },
       error: erro => console.error(erro),
