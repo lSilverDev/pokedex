@@ -16,6 +16,10 @@ export class PokeDetailsComponent {
     this.pokemon = nav!.extras!.state!['pokemon'];
   }
 
+  search(){
+
+  }
+
   return(){
     this.router.navigateByUrl("/");
   }

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment.development';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable, tap } from 'rxjs';
 import { Pokemon } from '../models/pokemon';
 
@@ -12,8 +12,11 @@ export class PokeServiceService {
 
   constructor(private http: HttpClient) { }
 
-  getPokemons(): Observable<any> {
-    return this.http.get(this.API + "pokemon/");
+  getPokemons(itensPage: number): Observable<any> {
+    let params = new HttpParams()
+                 .set('?limit', 10000)
+
+    return this.http.get(`${this.API}pokemon/${ params}`);
   }
 
   getPokemonDetails(path: string): Observable<Pokemon> {

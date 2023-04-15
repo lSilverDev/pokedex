@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { Pokemon } from 'src/app/models/pokemon';
 import { pokemonInfo } from 'src/app/models/pokemonInfo';
 import { PokeServiceService } from 'src/app/service/poke-service.service';
 
@@ -10,7 +11,10 @@ import { PokeServiceService } from 'src/app/service/poke-service.service';
 })
 export class PokeListComponent {
   pokeList: pokemonInfo[] = [];
+  pokemonListPath: Pokemon[] = [];
   subscription: Subscription = new Subscription;
+  currentPage: number = 20;
+  morePokemons: boolean = true;
 
 
   constructor(private service: PokeServiceService){}
@@ -20,10 +24,10 @@ export class PokeListComponent {
   }
 
   getPokemonList(){
-    this.subscription = this.service.getPokemons().subscribe({
+    this.subscription = this.service.getPokemons(this.currentPage).subscribe({
       next: (urls) => {
-        let pokemonList = urls.results;
-        this.getDetails(pokemonList);
+        this.pokemonListPath.push(...urls.results);
+        this.getDetails(this.pokemonListPath);
       },
       error: erro => console.error(erro),
     });
@@ -35,6 +39,23 @@ export class PokeListComponent {
         console.log(pokemon);
         this.pokeList.push(pokemon);
       });
+    });
+  }
+
+  changeMorePokemons(){
+    this.currentPage+=20;
+    this.service.getPokemons(this.currentPage).subscribe({
+      next: (urls) => {
+        this.pokemonListPath.push(urls.results);
+        this.pokeList = [];
+        console.log(this.currentPage);
+        if(this.pokemonListPath.length == 10000){
+          this.morePokemons = false;
+        }
+
+        this.getDetails(this.pokemonListPath);
+      },
+      error: erro => console.error(erro),
     });
   }
 

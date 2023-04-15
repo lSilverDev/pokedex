@@ -9,6 +9,7 @@ import { PokeDetailsComponent } from './views/poke-details/poke-details.componen
 import { TypeListComponent } from './components/type-list/type-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { LoadmoreBtnComponent } from './components/loadmore-btn/loadmore-btn.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FormsModule } from '@angular/forms';
     PokeListComponent,
     PokeCardComponent,
     PokeDetailsComponent,
-    TypeListComponent
+    TypeListComponent,
+    LoadmoreBtnComponent
   ],
   imports: [
     BrowserModule,
