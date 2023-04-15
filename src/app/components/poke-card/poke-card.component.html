@@ -22,27 +22,7 @@
       </div>
     </div>
   </div>
-  <div class="status" >
-    <div class="stats__row" *ngFor="let stats of pokemon.stats">
-      <div style="display: flex; flex-direction: column; width: 169px;">
-        <p class="stats_names">{{stats.stat['name']}}</p>
-      </div>
-      <div style="display: flex; flex-direction: column;">
-        <p class="stats_value">{{stats.base_stat}}</p>
-      </div>
-      <div class="d-flex flex-column margin-bottom-1 bar-stats">
-          <div class="bar-background"></div>
-          <div class="bar-progress"
-              [style.width.%]="stats.base_stat"
-          ></div>
-      </div>
-      <div class="d-flex">
-          <div class="flex-grow-1"></div>
-          <div class="font-bold font-size-small">
-            100
-          </div>
-      </div>
-    </div>
-  </div>
+  <app-status-graph [pokemonStats]="pokemon.stats"></app-status-graph>
+
 </section>
 

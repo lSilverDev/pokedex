@@ -18,7 +18,6 @@
           <button class="type_btn" *ngFor="let type of pokemon.types">{{type.type['name']}}</button>
       </div>
     </div>
-
     <div class="abilities_section">
       <p>Abilities</p>
       <div class="ability__row" *ngFor="let abilities of pokemon.abilities">
@@ -26,7 +25,6 @@
         <p class="ability_value">{{abilities.is_hidden}}</p>
       </div>
     </div>
-
-    <app-status-graph></app-status-graph>
+    <app-status-graph class="stats-app" [pokemonStats]="pokemon.stats"></app-status-graph>
   </main>
 </section>
