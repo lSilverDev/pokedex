@@ -46,6 +46,7 @@ export class PokeListComponent {
     this.currentPage+=20;
     this.service.getPokemons(this.currentPage).subscribe({
       next: (urls) => {
+        console.log("req");
         this.pokemonListPath.push(urls.results);
         this.pokeList = [];
         console.log(this.currentPage);

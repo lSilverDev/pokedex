@@ -5,7 +5,7 @@
     </div>
 
     <div>
-      <input type="text" [(ngModel)]="searchPokemonDetail" (keyup)="search()">
+      <input type="search" [formControl]="searchPokemonDetail">
       <button>
         <img src="" alt="">
       </button>

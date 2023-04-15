@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
+import { map, switchMap } from 'rxjs';
 import { Pokemon } from 'src/app/models/pokemon';
+import { PokeServiceService } from 'src/app/service/poke-service.service';
 
 @Component({
   selector: 'app-poke-details',
@@ -9,16 +12,18 @@ import { Pokemon } from 'src/app/models/pokemon';
 })
 export class PokeDetailsComponent {
   pokemon: Pokemon;
-  searchPokemonDetail: string = '';
+  searchPokemonDetail = new FormControl();
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private service: PokeServiceService) {
     const nav = this.router.getCurrentNavigation();
     this.pokemon = nav!.extras!.state!['pokemon'];
   }
 
-  search(){
-
-  }
+  pokemonsFinded$ = this.searchPokemonDetail.valueChanges
+  .pipe(
+    switchMap((search) => this.service.getPokemonByName(search)),
+    map(pokemon => this.pokemon = pokemon)
+  );
 
   return(){
     this.router.navigateByUrl("/");

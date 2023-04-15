@@ -23,6 +23,10 @@ export class PokeServiceService {
     return this.http.get<Pokemon>(path);
   }
 
+  getPokemonByName(search: string): Observable<Pokemon> {
+    return this.http.get<Pokemon>(`${this.API}pokemon/${search}`);
+  }
+
   getTypes(): Observable<any> {
     return this.http.get(this.API + "type");
   }
