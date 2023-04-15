@@ -7,7 +7,8 @@
 
   /* primarias */
   --very-dark-gray: hsl(0, 0%, 17%);
-  --dark-gray: hsl(0, 0%, 59%);
+  --dark-gray: hsla(0, 0%, 59%, 0.123);
+  --gray: rgba(190, 190, 190, 0.534);
   --white: white;
 
   /* Body Copy */

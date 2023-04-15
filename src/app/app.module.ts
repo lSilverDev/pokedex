@@ -10,6 +10,7 @@ import { TypeListComponent } from './components/type-list/type-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoadmoreBtnComponent } from './components/loadmore-btn/loadmore-btn.component';
+import { StatusGraphComponent } from './components/status-graph/status-graph.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { LoadmoreBtnComponent } from './components/loadmore-btn/loadmore-btn.com
     PokeCardComponent,
     PokeDetailsComponent,
     TypeListComponent,
-    LoadmoreBtnComponent
+    LoadmoreBtnComponent,
+    StatusGraphComponent
   ],
   imports: [
     BrowserModule,
