@@ -1,0 +1,59 @@
+
+.status{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  margin: 4em;
+  background-color: var(--dark-gray);
+  width: 50em;
+  border-radius: 20px;
+  padding: 1.5em;
+}
+
+.stats__row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Status bar */
+.bar-stats{
+  width: 20em;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.bar-background, .bar-progress {
+  border-radius: 8px;
+}
+
+.bar-background {
+  background: #ccccccfb;
+  height: 4px;
+  width: 100%;
+}
+
+.bar-progress {
+  background: rgb(40, 185, 3);
+  height: 8px;
+  margin-top: -6px;
+  transition: all .5s;
+  width: 44%;
+}
+
+.align-items-center {
+  align-items: center;
+}

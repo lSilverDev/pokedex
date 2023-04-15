@@ -7,5 +7,5 @@ import { Stat } from 'src/app/models/pokemon';
   styleUrls: ['./status-graph.component.css']
 })
 export class StatusGraphComponent {
-  @Input() stats: Stat[] = [];
+  @Input() pokemonStats: Stat[] = [];
 }

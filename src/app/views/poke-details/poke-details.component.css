@@ -12,3 +12,47 @@
   border: var(--gray);
 }
 
+.pokemon-detail__title{
+  padding: 1em;
+  font-size: var(--font-size-title);
+}
+
+.pokemon_div{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}
+
+.pokemon__details-sprit{
+  width: 15%;
+}
+
+.pokemon__details-name_id{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pokemon__details-types{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-left: 8em;
+}
+
+.type_btn{
+  width: 8em;
+  height: 3em;
+  border: none;
+}
+
+.envolv_line{
+
+}
+
+.abilities_section{
+
+}
