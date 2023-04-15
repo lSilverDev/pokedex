@@ -60,6 +60,10 @@ export class PokeListComponent {
     });
   }
 
+  filterType(type: string){
+    console.log(type);
+  }
+
   ngOnDestroy() {
     this.subscription.unsubscribe()
   }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { PokeServiceService } from 'src/app/service/poke-service.service';
 
 @Component({
@@ -8,6 +8,7 @@ import { PokeServiceService } from 'src/app/service/poke-service.service';
 })
 export class TypeListComponent {
   typeList = [];
+  @Output() emitType = new EventEmitter();
 
   constructor(private service: PokeServiceService){}
 
@@ -17,4 +18,9 @@ export class TypeListComponent {
       this.typeList = list.results;
     });
   }
+
+  filterType(type: string){
+    this.emitType.emit(type);
+  }
 }
+

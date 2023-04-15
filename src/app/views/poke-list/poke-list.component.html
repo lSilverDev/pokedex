@@ -1,5 +1,5 @@
 <div class="container">
-  <app-type-list></app-type-list>
+  <app-type-list (emitType)="filterType($event)"></app-type-list>
   <div class="container_card">
     <app-poke-card [pokeList]="pokeList" *ngIf="pokeList.length > 0"></app-poke-card>
     <div>

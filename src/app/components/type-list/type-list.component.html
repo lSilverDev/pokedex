@@ -2,7 +2,7 @@
   <button class="pokeBall_btn">
     Search
   </button>
-  <button class="type_btn" *ngFor="let type of typeList">
+  <button class="type_btn" *ngFor="let type of typeList" (click)="filterType(type)">
     <p>{{type["name"]}}</p>
   </button>
 </aside>
