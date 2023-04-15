@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { Species } from 'src/app/models/pokemon';
 import { PokeServiceService } from 'src/app/service/poke-service.service';
 
 @Component({
@@ -19,7 +20,7 @@ export class TypeListComponent {
     });
   }
 
-  filterType(type: string){
+  filterType(type: Species){
     this.emitType.emit(type);
   }
 }

@@ -1,6 +1,7 @@
+import { Type } from '@angular/compiler';
 import { Component } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { Pokemon } from 'src/app/models/pokemon';
+import { Pokemon, Species } from 'src/app/models/pokemon';
 import { pokemonInfo } from 'src/app/models/pokemonInfo';
 import { PokeServiceService } from 'src/app/service/poke-service.service';
 
@@ -24,21 +25,29 @@ export class PokeListComponent {
     this.getPokemonList();
   }
 
-  getPokemonList(){
+  getPokemonList(type?: Species){
     this.subscription = this.service.getPokemons(this.limit, this.offset).subscribe({
       next: (urls) => {
         this.pokemonListPath.push(...urls.results);
-        this.getDetails(this.pokemonListPath);
+        this.getDetails(this.pokemonListPath, type);
       },
       error: erro => console.error(erro),
     });
   }
 
-  getDetails(pokemonList: any){
+  getDetails(pokemonList: any, type?: Species){
+    this.pokeList = [];
     pokemonList.forEach((element: { url: string; }) => {
       this.service.getPokemonDetails(element.url).subscribe((pokemon) => {
-        console.log(pokemon);
-        this.pokeList.push(pokemon);
+        if(type){
+          pokemon.types.forEach(element => {
+            if(element.type.name == type.name){
+              this.pokeList.push(pokemon);
+            }
+          });
+        } else {
+          this.pokeList.push(pokemon);
+        }
       });
     });
   }
@@ -60,8 +69,8 @@ export class PokeListComponent {
     });
   }
 
-  filterType(type: string){
-    console.log(type);
+  filterType(type: Species){
+    this.getPokemonList(type);
   }
 
   ngOnDestroy() {
