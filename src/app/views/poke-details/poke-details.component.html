@@ -20,9 +20,10 @@
     </div>
     <div class="abilities_section">
       <p>Abilities</p>
+      <p>|</p>
       <div class="ability__row" *ngFor="let abilities of pokemon.abilities">
         <p class="ability_names">{{abilities.ability['name']}}</p>
-        <p class="ability_value">{{abilities.is_hidden}}</p>
+        <p class="ability_value">Hidden : {{abilities.is_hidden}}</p>
       </div>
     </div>
     <app-status-graph class="stats-app" [pokemonStats]="pokemon.stats"></app-status-graph>
