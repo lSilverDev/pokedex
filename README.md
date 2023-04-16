@@ -4,9 +4,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 This project uses pokéAPI V2 - https://pokeapi.co/docs/v2
 
-At this project i used pokeAPI v2 to build a simple pokedex. At this moment you can see all pokemons, some "alternatives" forms and more details like hp, attack, defense, sp attack, sp defense and speed stats. 
+For this project, I used PokeAPI v2 to build a simple Pokédex. Currently, you can see all Pokémon, some alternative forms, and more details like HP, attack, defense, special attack, special defense, and speed stats. 
 
-Soon -> you will can see pokemon's evolving line, evolution requirements, search for a pokemon and more.
+Soon, you will be able to see a Pokémon's evolutionary line, requirements for evolution, search for a Pokémon, and more.
 
 ## Development server
 
