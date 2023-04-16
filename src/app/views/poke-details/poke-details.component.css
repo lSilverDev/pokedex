@@ -19,13 +19,11 @@
 
 .pokemon_div{
   display: flex;
-  flex-direction: row;
-  width: 100%;
   justify-content: center;
 }
 
 .pokemon__details-sprit{
-  width: 30%;
+  width: 15%;
 }
 
 .pokemon__details-name_id{
@@ -47,11 +45,11 @@
   width: 8em;
   height: 3em;
   border: none;
+  font-family: var(--font-family-press);
 }
 
 .abilities_section{
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
 }

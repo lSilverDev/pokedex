@@ -7,6 +7,7 @@
   margin: 4em;
   background-color: var(--dark-gray);
   width: 50em;
+  height: 23em;
   border-radius: 20px;
   padding: 1.5em;
 }
@@ -19,7 +20,6 @@
   width: 100%;
 }
 
-/* Status bar */
 .bar-stats{
   width: 20em;
 }
@@ -41,7 +41,7 @@
 }
 
 .bar-background {
-  background: #ccccccfb;
+  background: #ccccccb2;
   height: 4px;
   width: 100%;
 }

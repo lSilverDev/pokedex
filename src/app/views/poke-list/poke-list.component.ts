@@ -2,7 +2,6 @@ import { Type } from '@angular/compiler';
 import { Component } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Pokemon, Species } from 'src/app/models/pokemon';
-import { pokemonInfo } from 'src/app/models/pokemonInfo';
 import { PokeServiceService } from 'src/app/service/poke-service.service';
 
 @Component({
@@ -11,7 +10,7 @@ import { PokeServiceService } from 'src/app/service/poke-service.service';
   styleUrls: ['./poke-list.component.css']
 })
 export class PokeListComponent {
-  pokeList: pokemonInfo[] = [];
+  pokeList: Pokemon[] = [];
   pokemonListPath: Pokemon[] = [];
   subscription: Subscription = new Subscription;
   offset: number = 20;
@@ -86,6 +85,7 @@ export class PokeListComponent {
   }
 
   filterType(type: Species){
+    this.pokemonListPath = [];
     this.getPokemonList(type);
   }
 
