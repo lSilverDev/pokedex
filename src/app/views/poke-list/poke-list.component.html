@@ -2,6 +2,9 @@
   <app-type-list (emitType)="filterType($event)"></app-type-list>
   <div class="container_card">
     <app-poke-card [pokeList]="pokeList" *ngIf="pokeList.length > 0"></app-poke-card>
-    <app-loadmore-btn [morePokemons]="morePokemons" (click)="loadMorePokemons()"></app-loadmore-btn>
+    <app-loadmore-btn
+      [morePokemons]="morePokemons"
+      (loadAll)="loadMorePokemons($event)"
+      (loadMore)="loadMorePokemons($event)"></app-loadmore-btn>
   </div>
 </div>

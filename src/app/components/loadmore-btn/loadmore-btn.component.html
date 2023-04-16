@@ -1,6 +1,9 @@
 <div class="loadBtn_container">
-  <button class="loadBtn" *ngIf="morePokemons; else noPokemons">
-    Loadmore Pokemons
+  <button class="loadBtn" *ngIf="morePokemons; else noPokemons" (click)="loadMorePokemons()">
+    Load more Pokemons
+  </button>
+  <button class="loadBtn" *ngIf="morePokemons;" (click)="loadAllPokemons()">
+    All
   </button>
   <ng-template #noPokemons>
     <div class="noPokemons_container">

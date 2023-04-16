@@ -61,9 +61,16 @@ export class PokeListComponent {
     });
   }
 
-  loadMorePokemons(){
-    this.limit += 20;
-    this.offset += 20;
+  loadMorePokemons(all: boolean){
+    if(all){
+      this.limit += 10000;
+      this.offset += 0;
+      this.morePokemons = false;
+    } else {
+      this.limit += 20;
+      this.offset += 20;
+    }
+
     this.pokemonListPath = [];
     this.service.getPokemons(this.limit, this.offset).subscribe({
       next: (urls) => {
