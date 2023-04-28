@@ -11,3 +11,6 @@ Soon, you will be able to see a Pokémon's evolutionary line, requirements for e
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
+
+##
+
